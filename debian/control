@@ -8,5 +8,5 @@ Homepage: http://www.cogent-it.com/software/ubuntu-environment
 
 Package: ue
 Architecture: any
-Depends:  joe curl lynx ipcalc gawk nmap tshark traceroute libnet-ip-perl cups-bsd gnuplot bc sshfs git-core daemontools
+Depends: joe, curl, lynx, ipcalc, gawk, nmap, tshark, traceroute, libnet-ip-perl, cups-bsd, gnuplot, bc, sshfs, git-core, daemontools
 Description: 
