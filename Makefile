@@ -16,6 +16,7 @@ install:
 
 	mkdir -p ${SHARE_INSTALL}
 	cp -r etc ${SHARE_INSTALL}
+	cp ./README.ue ${SHARE_INSTALL}
 
 	cp -r home ${PACKAGE_INSTALL}
 	cp -r root ${PACKAGE_INSTALL}
