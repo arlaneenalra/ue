@@ -18,5 +18,6 @@ install:
 	cp -r root ${PACKAGE_INSTALL}
 	cp -r usr ${PACKAGE_INSTALL}
 
-
+	find . -type f > debian/conffiles
+	sed -i -e 's/^\.//' debian/conffiles
 	
