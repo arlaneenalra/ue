@@ -7,6 +7,6 @@ Standards-Version: 3.8.3
 Homepage: http://www.cogent-it.com/software/ubuntu-environment 
 
 Package: ue
-Architecture: noarch
+Architecture: all
 Depends: joe, curl, lynx, ipcalc, gawk, nmap, tshark, traceroute, libnet-ip-perl, cups-bsd, gnuplot, bc, sshfs, git-core, daemontools
 Description: 
