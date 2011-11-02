@@ -1,7 +1,6 @@
 
 # Directory to put files we donn't necessarily want to overwrite
 # everytime we install
-SHARE_INSTALL=$(DESTDIR)/usr/share/ue/config
 PACKAGE_INSTALL=$(DESTDIR)
 
 
@@ -15,8 +14,7 @@ install:
 	fi
 
 	mkdir -p ${SHARE_INSTALL}
-	cp -r etc ${SHARE_INSTALL}
-	cp ./README.ue ${SHARE_INSTALL}
+	cp -r etc ${PACKAGE_INSTALL}
 
 	cp -r home ${PACKAGE_INSTALL}
 	cp -r root ${PACKAGE_INSTALL}
