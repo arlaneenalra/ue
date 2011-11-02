@@ -21,9 +21,9 @@ SHARE_INSTALL=/usr/share/ue
 
 case "$1" in
     configure)
-	mv ${SHARE_INSTALL}/etc/joe/* /etc/joe
-	mv ${SHARE_INSTALL}/etc/lynx-cur/* /etc/lynx-cur
-	mv ${SHARE_INSTALL}/etc/skel/* /etc/skel
+	cp ${SHARE_INSTALL}/etc/joe/* /etc/joe
+	cp ${SHARE_INSTALL}/etc/lynx-cur/* /etc/lynx-cur
+	find ${SHARE_INSTALL}/etc/skel/ -type f -exec mv {} /etc/skel \;
 	
     ;;
 
