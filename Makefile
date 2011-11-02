@@ -13,7 +13,6 @@ install:
 		exit 1 ; \
 	fi
 
-	cp -r etc ${PACKAGE_INSTALL}
 
 	cp -r home ${PACKAGE_INSTALL}
 	cp -r root ${PACKAGE_INSTALL}
