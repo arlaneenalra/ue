@@ -13,7 +13,6 @@ install:
 		exit 1 ; \
 	fi
 
-	mkdir -p ${SHARE_INSTALL}
 	cp -r etc ${PACKAGE_INSTALL}
 
 	cp -r home ${PACKAGE_INSTALL}
