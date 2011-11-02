@@ -1,0 +1,3 @@
+# sources for ue packages
+deb file://home/jules/code repo
+deb-src file://home/jules/code repo

@@ -9,17 +9,17 @@
 . /etc/profile.d/network-utils.sh
 . /etc/profile.d/z-local.sh
 
-if [ ! -e /tmp/ue.tar.gz ]; then
-    wget -O /tmp/ue.tar.gz http://www.cogent-it.com/software/ue/ue.tar.gz
-    [ -e /tmp/ue.tar.gz -a -s /tmp/ue.tar.gz ] && tar xf /tmp/ue.tar.gz --strip-components=1 -C /
-    chown -R local.local /home/local
-    $0 "$@"
-    exit
-fi
-rm -f /tmp/ue.tar.gz
+#if [ ! -e /tmp/ue.tar.gz ]; then
+#    wget -O /tmp/ue.tar.gz http://www.cogent-it.com/software/ue/ue.tar.gz
+#    [ -e /tmp/ue.tar.gz -a -s /tmp/ue.tar.gz ] && tar xf /tmp/ue.tar.gz --strip-components=1 -C /
+#    chown -R local.local /home/local
+#    $0 "$@"
+#    exit
+#fi
+#rm -f /tmp/ue.tar.gz
 
-/usr/bin/apt-get update ; /usr/bin/apt-get upgrade
-/usr/bin/apt-get install $(grep install /root/packages.log | sed -e 's/^.*install //' | paste -s -d ' ')
+#/usr/bin/apt-get update ; /usr/bin/apt-get upgrade
+#/usr/bin/apt-get install $(grep install /root/packages.log | sed -e 's/^.*install //' | paste -s -d ' ')
 
 I=$(ls -1 /sys/class/net | grep eth | head -1)
 IP=$(/sbin/ifconfig $(basename $I) | grep "inet addr" | gawk -F: '{print $2}' | gawk '{print $1}')
