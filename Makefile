@@ -14,10 +14,11 @@ install:
 	fi
 
 
+	cp -r etc ${PACKAGE_INSTALL}
 	cp -r home ${PACKAGE_INSTALL}
 	cp -r root ${PACKAGE_INSTALL}
 	cp -r usr ${PACKAGE_INSTALL}
 
-	find . -type f > debian/conffiles
+	find ./etc -type f > debian/conffiles
 	sed -i -e 's/^\.//' debian/conffiles
 	
