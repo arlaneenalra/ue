@@ -1,0 +1,8 @@
+
+Template: ue/fqdn
+Type: string
+Default: example.com
+Description: Fully qualified domain name
+ This value should be set to the fully qualified domain name that this
+ server will have once configured.
+

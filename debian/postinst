@@ -17,23 +17,27 @@ set -e
 # for details, see http://www.debian.org/doc/debian-policy/ or
 # the debian-policy package
 
+. /usr/share/debconf/confmodule
+
 SHARE_INSTALL=/usr/share/ue
+
+
 
 case "$1" in
     configure)
-	cp ${SHARE_INSTALL}/etc/joe/* /etc/joe
-	cp ${SHARE_INSTALL}/etc/lynx-cur/* /etc/lynx-cur
-	find ${SHARE_INSTALL}/etc/skel/ -type f -exec mv {} /etc/skel \;
+	      cp ${SHARE_INSTALL}/etc/joe/* /etc/joe
+	      cp ${SHARE_INSTALL}/etc/lynx-cur/* /etc/lynx-cur
+	      find ${SHARE_INSTALL}/etc/skel/ -type f -exec mv {} /etc/skel \;
 	
-    ;;
-
+        ;;
+    
     abort-upgrade|abort-remove|abort-deconfigure)
-    ;;
-
+        ;;
+    
     *)
         echo "postinst called with unknown argument \`$1'" >&2
         exit 1
-    ;;
+        ;;
 esac
 
 # dh_installdeb will replace this with shell code automatically

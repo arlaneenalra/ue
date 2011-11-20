@@ -1,0 +1,27 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use diagnostics;
+
+use Data::Dumper;
+
+use Debconf::Client::ConfModule ':all';
+
+version('2.0');
+my $capb = capb('backup');
+
+# let's get an fqdn
+input('critical', 'ue/fqdn');
+my @res = go();
+
+warn Dumper(\@res);
+
+
+
+stop;
+
+
+
+
+
